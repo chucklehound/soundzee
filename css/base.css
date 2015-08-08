@@ -1,0 +1,37 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #1594f3;
+  font-family: "Source Code Pro", Consolas, monospace;
+  font-size: 16px; }
+
+main {
+  margin-top: 64px; }
+  main button#soundzee {
+    border-radius: 100%;
+    border: 0;
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    min-width: 280px;
+    min-height: 280px;
+    padding: 24px;
+    outline: 0;
+    background-color: #16ff6f;
+    width: 70%;
+    margin: 0 auto;
+    color: #0568b4;
+    font-family: "Source Code Pro", Consolas, monospace; }
+    main button#soundzee.pressed {
+      -webkit-animation: soundzee-press .4s ease-in-out 1; }
+
+@-webkit-keyframes soundzee-press {
+  70% {
+    box-shadow: 0 0 0 30px #0568b4, inset 0 0 0 20px #00e256;
+    -webkit-transform: scale(0.9, 0.9); }
+  100% {
+    box-shadow: 0 0 0 100px transparent, inset 0 0 0 100px transparent; } }
+
+/*# sourceMappingURL=base.css.map */
