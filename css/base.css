@@ -17,15 +17,15 @@ button {
   border: 0; }
 
 svg#brand {
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   display: block; }
-  svg#brand:hover #outer {
+  svg#brand:hover #outer, svg#brand:focus #outer {
     -webkit-animation: logo-press .4s ease-in-out 1 forwards; }
   svg#brand #outer {
     transform-origin: 45px 41px; }
 
 main {
-  margin-top: 32px; }
+  margin-top: 24px; }
   main button#soundzee {
     border-radius: 100%;
     border: 0;
@@ -44,7 +44,8 @@ main {
     color: white;
     font-family: "Source Code Pro", Consolas, monospace;
     z-index: 999;
-    position: relative; }
+    position: relative;
+    -webkit-animation: breathe 2s ease-in-out infinite; }
     main button#soundzee.pressed {
       -webkit-animation: soundzee-press .4s ease-in-out 1; }
 
@@ -59,6 +60,9 @@ footer {
     footer button.pressed {
       -webkit-animation: soundzee-press .4s ease-in-out 1; }
 
+@-webkit-keyframes breathe {
+  50% {
+    -webkit-transform: scale(1.01, 1.01); } }
 @-webkit-keyframes logo-press {
   100% {
     -webkit-transform: rotate(1turn); } }

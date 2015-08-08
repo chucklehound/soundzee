@@ -29,10 +29,11 @@ button {
 }
 
 svg#brand {
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   display: block;
 
-  &:hover #outer {
+  &:hover #outer,
+  &:focus #outer {
       -webkit-animation: logo-press .4s ease-in-out 1 forwards;
   }
 
@@ -42,7 +43,7 @@ svg#brand {
 }
 
 main {
-  margin-top: 32px;
+  margin-top: 24px;
 
   button#soundzee {
     border-radius: 100%;
@@ -63,6 +64,7 @@ main {
     font-family: $brand-font;
     z-index: 999;
     position: relative;
+    -webkit-animation: breathe 2s ease-in-out infinite;
 
     &.pressed {
       -webkit-animation: soundzee-press .4s ease-in-out 1;
@@ -84,6 +86,10 @@ footer {
       -webkit-animation: soundzee-press .4s ease-in-out 1;
     }
   }
+}
+
+@-webkit-keyframes breathe {
+  50% { -webkit-transform: scale(1.01,1.01); }
 }
 
 @-webkit-keyframes logo-press {
