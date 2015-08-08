@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('button#soundzee');
+    var buttons = document.querySelectorAll('button');
 
     for (var i = 0, max = buttons.length; i < max; i++) {
         buttons[i].addEventListener('click', addPressedClass);

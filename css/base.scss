@@ -18,8 +18,18 @@ body {
   font-size: $base-font-size;
 }
 
+button {
+  background-color: $dark-brand;
+  border-radius: 8px;
+  color: white;
+  font-family: $brand-font;
+  font-size: 22px;
+  padding: 24px 16px;
+  border: 0;
+}
+
 svg#brand {
-  margin: 42px auto 0;
+  margin: 32px auto 0;
   display: block;
 
   &:hover #outer {
@@ -27,12 +37,12 @@ svg#brand {
   }
 
   #outer {
-    transform-origin: 45px 42px;
+    transform-origin: 45px 41px;
   }
 }
 
 main {
-  margin-top: 42px;
+  margin-top: 32px;
 
   button#soundzee {
     border-radius: 100%;
@@ -40,15 +50,35 @@ main {
     display: block;
     font-size: 32px;
     font-weight: bold;
-    min-width: 280px;
-    min-height: 280px;
+    min-width: 260px;
+    max-width: 260px;
+    min-height: 260px;
+    max-height: 260px;
     padding: 24px;
     outline: 0;
     background-color: $contrast;
     width: 70%;
     margin: 0 auto;
-    color: $dark-brand;
+    color: white;
     font-family: $brand-font;
+    z-index: 999;
+    position: relative;
+
+    &.pressed {
+      -webkit-animation: soundzee-press .4s ease-in-out 1;
+    }
+  }
+}
+
+footer {
+  margin: 42px 0 0;
+
+  button {
+    margin: 0 auto;
+    display: block;
+    min-width: 240px;
+    width: 70%;
+    max-width: 320px;
 
     &.pressed {
       -webkit-animation: soundzee-press .4s ease-in-out 1;
@@ -61,6 +91,6 @@ main {
 }
 
 @-webkit-keyframes soundzee-press {
-  70% { box-shadow: 0 0 0 30px $dark-brand, inset 0 0 0 20px darken($contrast,10%); -webkit-transform: scale(0.9,0.9);  }
+  70% { box-shadow: 0 0 0 30px $dark-brand, inset 0 0 0 10px rgba(0,0,0,.1); -webkit-transform: scale(0.9,0.9);  }
   100% { box-shadow: 0 0 0 100px rgba(0,0,0,0), inset 0 0 0 100px rgba(0,0,0,0); }
 }
