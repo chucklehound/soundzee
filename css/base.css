@@ -7,8 +7,16 @@ body {
   font-family: "Source Code Pro", Consolas, monospace;
   font-size: 16px; }
 
+svg#brand {
+  margin: 42px auto 0;
+  display: block; }
+  svg#brand:hover #outer {
+    -webkit-animation: logo-press .4s ease-in-out 1 forwards; }
+  svg#brand #outer {
+    transform-origin: 45px 42px; }
+
 main {
-  margin-top: 64px; }
+  margin-top: 42px; }
   main button#soundzee {
     border-radius: 100%;
     border: 0;
@@ -19,7 +27,7 @@ main {
     min-height: 280px;
     padding: 24px;
     outline: 0;
-    background-color: #16ff6f;
+    background-color: #ff8517;
     width: 70%;
     margin: 0 auto;
     color: #0568b4;
@@ -27,9 +35,12 @@ main {
     main button#soundzee.pressed {
       -webkit-animation: soundzee-press .4s ease-in-out 1; }
 
+@-webkit-keyframes logo-press {
+  100% {
+    -webkit-transform: rotate(1turn); } }
 @-webkit-keyframes soundzee-press {
   70% {
-    box-shadow: 0 0 0 30px #0568b4, inset 0 0 0 20px #00e256;
+    box-shadow: 0 0 0 30px #0568b4, inset 0 0 0 20px #e36c00;
     -webkit-transform: scale(0.9, 0.9); }
   100% {
     box-shadow: 0 0 0 100px transparent, inset 0 0 0 100px transparent; } }

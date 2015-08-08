@@ -1,6 +1,6 @@
 $primary-brand: #1594f3;
 $dark-brand: #0568b4;
-$contrast: #16ff6f;
+$contrast: #ff8517;
 $neutral: #c1c7cb;
 
 $brand-font: 'Source Code Pro', Consolas, monospace;
@@ -18,8 +18,21 @@ body {
   font-size: $base-font-size;
 }
 
+svg#brand {
+  margin: 42px auto 0;
+  display: block;
+
+  &:hover #outer {
+      -webkit-animation: logo-press .4s ease-in-out 1 forwards;
+  }
+
+  #outer {
+    transform-origin: 45px 42px;
+  }
+}
+
 main {
-  margin-top: 64px;
+  margin-top: 42px;
 
   button#soundzee {
     border-radius: 100%;
@@ -41,6 +54,10 @@ main {
       -webkit-animation: soundzee-press .4s ease-in-out 1;
     }
   }
+}
+
+@-webkit-keyframes logo-press {
+  100% { -webkit-transform: rotate(1turn); }
 }
 
 @-webkit-keyframes soundzee-press {
